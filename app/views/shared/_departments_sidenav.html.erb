@@ -1,0 +1,45 @@
+<nav class="sidenav">
+  <ul>
+    <% @categories.each_with_index do |cat, idx| %>
+        <%- cat_match = request.original_fullpath.include? department_category_path(cat) %>
+        <li class="<%= 'active' if cat_match %>">
+          <a href="<%= department_category_path(cat) %>"><%= cat.name %></a>
+          <% if cat.departments.present? %>
+              <ul class="sub-menu" style="<%= 'display: block;' if cat_match %>">
+                <% cat.departments.each do |dept| %>
+                    <%- dept_match = (request.original_fullpath+'/').include? (department_category_department_path(cat, dept)+'/') %>
+                    <li class="<%= 'active' if cat_match %>">
+                      <%= link_to dept.name, [cat, dept] %>
+                      <ul class="sub-menu" style="<%= 'display: block;' if dept_match %>">
+                        <li class="<%= 'active' if current_page? about_department_path(cat, dept) %>" >
+                          <a href="<%= about_department_path(cat, dept) %>">Про відділення</a>
+                        </li>
+
+                        <li class="<%= 'active' if current_page? department_patients_path(cat, dept) %>">
+                          <a href="<%= department_patients_path(cat, dept) %>">Пацієнтам</a>
+                        </li>
+
+                        <li class="<%= 'active' if current_page? department_specialists_path(cat, dept) %>">
+                          <a href="<%= department_specialists_path(cat, dept) %>">Фахівці</a>
+                        </li>
+
+                        <li class="<%= 'active' if current_page? department_achievements_path(cat, dept) %>">
+                          <a href="<%= department_achievements_path(cat, dept) %>">Досягнення</a>
+                        </li>
+
+                        <li class="<%= 'active' if current_page? department_publications_path(cat, dept)  %>">
+                          <a href="<%= department_publications_path(cat, dept) %>">Публікації</a>
+                        </li>
+
+                        <li class="<%= 'active' if current_page? department_press_path(cat, dept)  %>">
+                          <a href="<%= department_press_path(cat, dept) %>">Преса про нас</a>
+                        </li>
+                      </ul>
+                    </li>
+                <% end %>
+              </ul>
+          <% end %>
+        </li>
+    <% end %>
+  </ul>
+</nav>

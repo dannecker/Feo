@@ -1,0 +1,14 @@
+<div class="box">
+  <div class="pic" style="">
+    <%= link_to [@category, item] do %>
+        <span></span>
+        <img src="<%= item.try(:thumbnail) || item.image %>"
+             alt="<%= item.name %>">
+    <% end %>
+  </div>
+  <h3>
+    <%= link_to item.name, [@category, item] %>
+  </h3>
+
+  <p><%= raw item.description %></p>
+</div>

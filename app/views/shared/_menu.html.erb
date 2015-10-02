@@ -1,0 +1,415 @@
+<ul class="mega-menu">
+
+  <li class='two-col drop'>
+    <a href="/about-us.html">
+      О Феофанії
+    </a>
+
+    <div class="submenu" style="display: none;">
+                <span class="toparrow">
+                </span>
+      <a href="/about-us.html">
+        <h2>
+          <svg class="svg-profile" viewBox="0 0 32 32">
+            <g filter="">
+              <use xlink:href="#icon-profile">
+              </use>
+            </g>
+          </svg>
+          Про заклад
+        </h2>
+      </a>
+
+      <div class='subcols c1'>
+        <ul>
+          <li>
+            <a href='#'>
+              Чим ми відрізняемось
+            </a>
+          </li>
+          <li>
+            <a href='/timeline.html'>
+              Наша історія
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Our-Vision.html'>
+              Наше бачення
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Lead-Researchers.html'>
+              Провідні фахівці
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Governance.html'>
+              Структура
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Board-Members.html'>
+              Керівництво
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='subcols c2'>
+        <ul>
+          <li>
+            <a href='/about-us/Affiliations-and-Partnerships.html'>
+              Партнери
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Job-Vacancies-and-Careers.html'>
+              Кар'ера у нас
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Annual-Reports-and-Financial-Statements.html'>
+              Державні закупівлі
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Newsletter-Archive.html'>
+              Періодичні видання
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/In-the-Media.html'>
+              В пресі
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Videos.html'>
+              Відео
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Відгуки пацієнтів
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+  <li class='drop'>
+    <a href="/departments">
+      Відділення
+    </a>
+
+    <div class="submenu" style="display: none;">
+      <span class="toparrow"></span>
+      <a href="/departments">
+        <h2>
+          <svg class="svg-research" viewBox="0 0 62 70">
+            <g filter="">
+              <use xlink:href="#icon-research">
+              </use>
+            </g>
+          </svg>
+          Відділення
+        </h2>
+      </a>
+
+
+      <% @categories.each_with_index do |cat, idx| %>
+          <div class="subcols c<%= idx %>">
+            <a href='<%= department_category_path(cat) %>' class='mega-menu-sectionlink'>
+              <h3><%= cat.name %></h3>
+            </a>
+
+            <% if cat.departments.present? %>
+                <ul>
+                  <% cat.departments.each do |dept| %>
+                      <li><%= link_to dept.name, [cat, dept] %></li>
+                  <% end %>
+                </ul>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+
+  </li>
+
+  <li class='two-col'>
+    <a href="/directions.html">
+      Напрямки
+    </a>
+
+    <div class="submenu" style="display: none;">
+                <span class="toparrow">
+                </span>
+      <a href="directions.html">
+        <h2>
+          <svg class="svg-love" viewBox="0 0 32 32">
+            <g filter="">
+              <use xlink:href="#icon-love">
+              </use>
+            </g>
+          </svg>
+          Оберіть напрямок
+        </h2>
+      </a>
+
+      <div class='subcols c1'>
+        <ul>
+          <li>
+            <a href='#'>
+              Алерген-специфічна імунотерапія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Алергологія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Анестезія та інтенсивна терапія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Вакцинація
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Ведення вагітності
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Гастроскопія
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='subcols c2'>
+        <ul>
+          <li>
+            <a href='#'>
+              Гастроентерологія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Гепатологія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Гінекологія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Дерматологія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Діагностика інсульту
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Дієтологія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Інсульт
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Кардіологія
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+  <li class='one-col'>
+    <a href="/Research-Explained.html">
+      Дослідження
+    </a>
+
+    <div class="submenu" style="display: none;">
+      <span class="toparrow"></span>
+      <a href="Research-Explained.html">
+        <h2>
+          <svg class="svg-date" viewBox="0 0 55 60">
+            <g filter="">
+              <use xlink:href="#icon-lamp">
+              </use>
+            </g>
+          </svg>
+          Лікарям
+        </h2>
+      </a>
+
+      <div class='subcols c1'>
+        <ul>
+
+          <li>
+            <a href='#'>
+              Семінари
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Тренінги та Симпозіуми
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Обладнання
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Сертифікація
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+  <li class='one-col'>
+    <a href="#">
+      Пацієнту
+    </a>
+
+    <div class="submenu" style="display: none;">
+      <span class="toparrow"></span>
+      <a href="#">
+        <h2>
+          <svg class="svg-date" viewBox="0 0 60 60">
+            <g filter="">
+              <use xlink:href="#icon-date">
+              </use>
+            </g>
+          </svg>
+          Пацієнту
+        </h2>
+      </a>
+
+      <div class='subcols c1'>
+        <ul>
+
+          <li>
+            <a href='#'>
+              Запис на прийом
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Захворювання
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Программи обстеження
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Результати аналізів
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Ціни на послуги
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Донорство
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Запитання та відповіді
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+  <li class=''>
+    <a href="/news">
+      Новини
+    </a>
+  </li>
+
+  <li class='one-col'>
+    <a href="/contact.html">
+      Контакти
+    </a>
+
+    <div class="submenu" style="display: none;">
+                <span class="toparrow">
+                </span>
+      <a href="/contact.html">
+        <h2>
+          <svg class="svg-contact" viewBox="0 0 50 50">
+            <g filter="">
+              <use xlink:href="#icon-contact">
+              </use>
+            </g>
+          </svg>
+          Контакт
+        </h2>
+      </a>
+
+      <div class='subcols c1'>
+        <ul>
+          <li>
+            <a href='/contact/For-Media.html'>
+              Для преси
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+  <li class="search">
+    <a href="#"><i class="icon-search"></i></a>
+
+    <div class="submenu" onkeypress="" style="display: none;">
+                                    <span class="toparrow">
+                                    </span>
+      <input type="text" placeholder="Введіть пошуковий запит" id="uiTxtSearchText"
+             name="uiTxtSearchText" onkeypress="return SearchEnterEvent(event)"/>
+      <input type="submit" value="Пошук" class="btn" id="uiBtnSearch" name="uiBtnSearch"
+             onclick="RedirectToSearchPage(); return false;">
+
+    </div>
+  </li>
+</ul>

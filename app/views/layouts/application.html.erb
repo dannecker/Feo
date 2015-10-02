@@ -1,0 +1,153 @@
+<!doctype html>
+<!--[if lt IE 8]>
+<html lang="ru-ua" class="ie ie7 no-js"> <![endif]-->
+<!--[if IE 8]>
+<html lang="ru-ua" class="ie ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="ru-ua" class="ie ie9 no-js"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="ru-ua" class="no-js"> <!--<![endif]-->
+<head id="">
+  <meta charset="utf-8">
+
+  <script>dataLayer = (typeof dataLayer !== 'undefined') ? dataLayer : [];</script>
+  <title>Клінічна лікарня Феофанія, Київ</title>
+
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
+
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/icon-57x57-precomposed.png"/>
+  <!-- Retina iPhone -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/icon-114x114-precomposed.png"/>
+  <!-- Standard iPad -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/icon-72x72-precomposed.png"/>
+
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet'
+        type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet'
+        type='text/css'>
+
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag 'application', media: 'screen', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'modernizr', 'data-turbolinks-track' => true %>
+  <!--[if lt IE 9]>
+  <%= javascript_include_tag 'html5shiv-3.7.2.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'respond-1.4.2.min', 'data-turbolinks-track' => true %>
+  <![endif]-->
+</head>
+<body class="LTR ContentBody">
+
+<%= render "shared/svg" %>
+<%= render "shared/sidebar_mobile" %>
+
+<main>
+  <div class="mobile-menu">
+    <div class="container">
+      <div class="row">
+        <div class="mlogo">
+          <a href="/" title="Феофанія">
+            <img src="/images/mlogo.jpg" alt="Логотип Феофанії">
+          </a>
+        </div>
+        <div class="mheading">
+          <h2>
+            +380 (44) 259-67-47
+            <span>
+              цілодобово
+            </span>
+          </h2>
+        </div>
+        <div class="btn-nav">
+          <a id="showmenu" href="index.html#">
+            <img src="/images/mnav.jpg" alt="Меню">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="top-navigation-wrapper">
+    <div class="container">
+      <header class="row">
+        <div class="logo">
+          <a href="/" title="Головна сторінка - Феофанія">
+            <img src="/images/logo.png" alt="Логотип Феофанії">
+          </a>
+        </div>
+        <div class="top_bar">
+          <div class="topbar-heading">
+            <a href="/registry.html" class="btn btn-red arrow">
+              Реєстратура
+              <i class="icon-arrow">
+              </i>
+            </a>
+
+            <h2>
+              +380 (44) 259-67-47
+            </h2>
+          </div>
+
+          <nav class="top-navigation">
+            <%= render 'shared/menu' %>
+          </nav>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <div class="scroll-contact" id="divMobileScroll">
+    <a href="#contact-bottom">Наші контактні данні <i class="icon-arrow-bottom"></i></a>
+  </div>
+
+  <%= content_for?(:content) ? yield(:content) : yield %>
+
+  <%= render 'shared/footer' %>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/jquery.1.11.2.min.js"><\/script>')</script>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <script>
+      $(document).ready(function () {
+          $('.top-navigation-wrapper').stickynav();
+      });
+
+      $(function () {
+          $("#uiBtnSubscribe").click(function () {
+              subscribe();
+          });
+          $("#uiBtnLogin").click(function () {
+              login();
+          });
+      });
+
+      if ($(window).width() > 630) {
+          $("#news-slider").carouFredSel({
+              items: "variable",
+              auto: false,
+              swipe: true,
+
+              prev: {
+                  button: ".news-nav .prev",
+                  key: "left"
+              },
+              next: {
+                  button: ".news-nav .next",
+                  key: "right"
+              }
+          });
+      }
+  </script>
+</main>
+</body>
+</html>

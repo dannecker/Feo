@@ -1,0 +1,197 @@
+.page-icon svg {
+    max-width: 80px !important;
+}
+
+#locationField, #controls {
+    position: relative;
+    width: 480px;
+}
+
+#autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+}
+
+#address {
+    border: 1px solid #000090;
+    background-color: #f0f0ff;
+    width: 480px;
+    padding-right: 2px;
+}
+
+#address td {
+    font-size: 10pt;
+}
+
+.field {
+    width: 99%;
+}
+
+.slimField {
+    width: 80px;
+}
+
+.wideField {
+    width: 200px;
+}
+
+#locationField {
+    height: 20px;
+    margin-bottom: 2px;
+}
+
+.select-dob-day, .select-dob-month, .select-dob-year {
+    position: relative;
+    float: left;
+    width: 110px;
+    margin-right: 10px;
+}
+
+.select-dob-day .sbHolder, .select-dob-month .sbHolder, .select-dob-year .sbHolder {
+    border: 2px solid #d9e3f3;
+    color: #000;
+    height: 39px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.select-dob-day .sbToggle, .select-dob-month .sbToggle, .select-dob-year .sbToggle {
+    background: url("/images/default/images/arrow.png") no-repeat 2px -904px;
+    height: 39px;
+}
+
+.select-dob-day .sbSelector, .select-dob-month .sbSelector, .select-dob-year .sbSelector {
+    color: #777;
+    font-size: 14px;
+    padding-top: 5px 0;
+    width: 100%;
+    line-height: 38px;
+}
+
+.select-dob-day .sbOptions, .select-dob-month .sbOptions, .select-dob-year .sbOptions {
+    width: 100%;
+    left: -2px;
+    font-size: 14px;
+    margin-top: 11px;
+    background: #f2fbfe;
+    border-left: 2px solid #d9e3f3;
+    border-right: 2px solid #d9e3f3;
+    border-bottom: 2px solid #d9e3f3;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+.select-dob-day .sbOptions li, .select-dob-month .sbOptions li, .select-dob-year .sbOptions li {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0 0;
+}
+
+.select-dob-day .sbOptions a, .select-dob-month .sbOptions a, .select-dob-year .sbOptions a {
+    border-bottom: 0 solid #d9e3f3;
+    color: #777;
+    padding: 5px 7px;
+}
+
+.select-dob-day .sbOptions a:hover, .select-dob-month .sbOptions a:hover, .select-dob-year .sbOptions a:hover {
+    color: #777;
+    background: #d9f1fa;
+}
+
+#helpSupporterNo {
+    cursor: pointer;
+}
+
+.help-info {
+    background-color: #f9f9f9;
+    border: 1px solid #d9e3f3;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.btn-close {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.select-payment-type.div-payment-type {
+    float: left;
+    width: 340px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.alert-error {
+    background: none repeat scroll 0 0 #ee3123;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 10px;
+    text-align: center;
+    clear: left;
+    margin-top: 5px;
+    width: 250px;
+}
+
+.alert-confirm {
+    background: none repeat scroll 0 0 #7fbd61;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 10px;
+    text-align: center;
+    clear: left;
+    margin-top: 5px;
+    width: 250px;
+}
+
+.state.field {
+    width: 260px;
+}
+
+.field-info {
+    color: #777;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding-top: 3px;
+    font-size: 14px;
+}
+
+.infobtn {
+    cursor: pointer;
+}
+
+input.error[type="text"], input.error[type="number"], input.field.error, textarea.field.error, select.field.error {
+    border-color: #e10000;
+    color: #e10000;
+}
+
+.donate-form select.field {
+    width: 100%;
+}
+
+.donate-form .select-year {
+    width: 83px;
+}
+
+.donate-form .cvc input[type="number"] {
+    width: 40px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="numeric"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 5px #d9e3f3;
+}

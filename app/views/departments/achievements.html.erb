@@ -1,0 +1,4 @@
+<% breadcrumb :department_subpage, @department, 'Досягнення' %>
+
+<%= render partial: 'shared/departments_subpage',
+           locals: { page: @department.achievements } if @department.try(:achievements) %>

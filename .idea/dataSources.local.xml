@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails Feo: production" uuid="b3607415-e41d-47a1-aee6-448a9ec75efd">
+      <user-name>postgres</user-name>
+    </data-source>
+    <data-source name="Rails Feo: development" uuid="e8dd025e-c35c-4258-9157-e94b000440c0">
+      <user-name>postgres</user-name>
+    </data-source>
+    <data-source name="Rails Feo: test" uuid="1e238b51-7320-415e-a459-0eae2fdb2c45">
+      <user-name>postgres</user-name>
+    </data-source>
+  </component>
+</project>

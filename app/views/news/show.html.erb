@@ -1,0 +1,31 @@
+<% breadcrumb :news_item, @post %>
+
+<div class="single">
+  <h1><%= @post.title %></h1>
+
+  <div class="news-details">
+    <strong><%= @post.updated_at.strftime('%d/%m/%Y %H:%M') %></strong>
+    <span class="spacer">&nbsp;</span>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({
+        publisher: "ur-84b75248-af6d-8e1e-f01d-36e45a291623",
+        doNotHash: false,
+        doNotCopy: false,
+        hashAddressBar: false
+    });</script>
+
+    <div class="share">
+      <strong>Поділитися:</strong>
+      <span class="spacer">&nbsp;</span>
+      <span class='st_facebook_custom'></span>
+      <span class="spacer">&nbsp;</span>
+      <span class='st_twitter_custom'></span>
+      <span class="spacer">&nbsp;</span>
+      <span class='st_googleplus_custom'></span>
+    </div>
+  </div>
+
+  <div>
+    <%= raw @post.content %>
+  </div>
+</div>

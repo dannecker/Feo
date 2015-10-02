@@ -1,0 +1,4 @@
+<% breadcrumb :department_subpage, @department, 'Про відділення' %>
+
+<%= render partial: 'shared/departments_subpage',
+           locals: { page: @department.general_overview } if @department.try(:general_overview) %>

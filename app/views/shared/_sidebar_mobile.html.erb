@@ -1,0 +1,243 @@
+<aside class="sidebar-mobile">
+  <div class="search">
+    <div class="form">
+      <input type="text" placeholder="Введіть пошуковий запит" id="uiTxtSearchMobile"
+             onkeypress="return SearchEnterEventMobile(event)">
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="/about-us.html">
+          <svg class="svg-icon about" viewBox="0 0 32 32">
+            <g filter="">
+              <use xlink:href="#icon-profile">
+              </use>
+            </g>
+          </svg>
+          Про заклад
+        </a>
+        <ul>
+          <li>
+            <a href='/about-us/difference.html'>
+              Чим ми відрізняемось
+            </a>
+          </li>
+          <li>
+            <a href='/timeline.html'>
+              Наша історія
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Our-Vision.html'>
+              Наше бачення
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Lead-Researchers.html'>
+              Провідні фахівці
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Governance.html'>
+              Структура
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Board-Members.html'>
+              Керівництво
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Affiliations-and-Partnerships.html'>
+              Партнери
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Job-Vacancies-and-Careers.html'>
+              Кар'ера у нас
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Annual-Reports-and-Financial-Statements.html'>
+              Державні закупівлі
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Newsletter-Archive.html'>
+              Періодичні видання
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/In-the-Media.html'>
+              В пресі
+            </a>
+          </li>
+          <li>
+            <a href='/about-us/Videos.html'>
+              Відео
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Відгуки пацієнтів
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/departments.html">
+          <svg class="svg-icon lab" viewBox="0 0 60 60">
+            <g filter="">
+              <use xlink:href="#icon-research">
+              </use>
+            </g>
+          </svg>
+          Відділення
+        </a>
+        <ul>
+          <% @categories.each_with_index do |cat, idx| %>
+              <%- cat_match = request.original_fullpath.include? department_category_path(cat) %>
+              <li class="<%= 'active' if cat_match %>">
+                <a href="<%= department_category_path(cat) %>"><%= cat.name %></a>
+              </li>
+          <% end %>
+        </ul>
+      </li>
+
+      <li>
+        <a href="directions.html">
+          <svg class="svg-icon" viewBox="0 0 31 31">
+            <g filter="">
+              <use xlink:href="#icon-love">
+              </use>
+            </g>
+          </svg>
+          Напрямки
+        </a>
+        <ul>
+          <li>
+            <a href='#'>
+              Алерген-специфічна імунотерапія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Алергологія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Анестезія та інтенсивна терапія
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Вакцинація
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Ведення вагітності
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Гастроскопія
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="Research-Explained.html">
+          <svg class="svg-icon lamp" viewBox="0 0 55 60">
+            <g filter="">
+              <use xlink:href="#icon-lamp">
+              </use>
+            </g>
+          </svg>
+          Дослідження
+        </a>
+        <ul>
+          <li>
+            <a href='#'>
+              Семінари
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Тренінги та Симпозіуми
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Обладнання
+            </a>
+          </li>
+
+          <li>
+            <a href='#'>
+              Сертифікація
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="Events.html">
+          <svg class="svg-icon" viewBox="0 0 60 60">
+            <g filter="">
+              <use xlink:href="#icon-date">
+              </use>
+            </g>
+          </svg>
+          Паціенту
+        </a>
+
+      </li>
+
+      <li>
+        <a href="news.html">
+          <svg class="svg-icon" viewBox="0 0 60 60">
+            <g filter="">
+              <use xlink:href="#icon-news">
+              </use>
+            </g>
+          </svg>
+          Новини
+        </a>
+
+      </li>
+
+      <li>
+        <a href="/contact.html">
+          <svg class="svg-icon" viewBox="0 0 45 45">
+            <g filter="">
+              <use xlink:href="#icon-contact">
+              </use>
+            </g>
+          </svg>
+          Контакти
+        </a>
+        <ul>
+          <li>
+            <a href='/contact/For-Media.html'>
+              Для преси
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="slide-registry">
+      <a href="registry.html" class="btn btn-red">
+        Реєстратура
+        <i class="icon-arrow">
+        </i>
+      </a>
+    </div>
+  </nav>
+</aside>

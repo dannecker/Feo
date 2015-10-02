@@ -1,0 +1,4 @@
+<% breadcrumb :department_subpage, @department, 'Пацієнтам' %>
+
+<%= render partial: 'shared/departments_subpage',
+           locals: { page: @department.for_patients } if @department.try(:for_patients) %>

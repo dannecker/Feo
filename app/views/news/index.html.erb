@@ -1,0 +1,27 @@
+<% breadcrumb :news %>
+
+<div class="flat-title show-on-mobile">
+  <h1>Новини Феофанії</h1>
+</div>
+
+<div class="article-listing">
+  <% @posts.each_with_index do |post, idx| %>
+      <div class="box <%= 'last' if (idx+1) % 3 == 0 %>">
+        <article>
+          <div class="pic">
+            <% link_to news_item_path(post), title: post.title do %>
+                <%= image_tag post.try(:thumbnail) || post.image, alt: post.title %>
+            <% end %>
+          </div>
+          <div class="detail">
+            <h3><%= link_to post.title, news_item_path(post), title: post.title %></h3>
+            <span class="date"><%= post.date %></span>
+            <p><%= raw post.subtitle %></p>
+            <p><%= link_to raw('Докладніше &rarr;'), news_item_path(post), title: post.title %></p>
+          </div>
+        </article>
+      </div>
+  <% end %>
+
+  <%= link_to raw("Завантажити більше новин <i class='icon-arrow-bottom'></i>"), news_path, class: 'loadmore' %>
+</div>

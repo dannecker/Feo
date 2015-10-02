@@ -1,0 +1,169 @@
+<% content_for :content do %>
+    <%= render partial: 'shared/title_section',
+               # collection: @products, as: :item,
+               locals: {color: '',
+                        title: 'Новини',
+                        icon: '<svg class="svg-svg-news" viewBox="0 0 60 80">
+                                <use xlink:href="#icon-news"/>
+                              </svg>'} %>
+
+    <div class="page-icon">
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="leftContent">
+          <%= yield %>
+        </div>
+
+        <div class="rightSidebar">
+
+          <div class="sidebar-widget blue">
+            <div class="search-widget">
+              <div class="heading"><h3>Пошук по новинах</h3></div>
+              <div class="form">
+                <input type="text" placeholder="Введіть пошуковий запит" id="uiTxtSearchNews" value="">
+              </div>
+            </div>
+            <div class="line"></div>
+
+
+            <div class="archive-widget">
+              <div class="heading"><h3>Архіви новин</h3></div>
+              <div class="archive-list">
+
+                <h4><a href="news.html">2014</a></h4>
+                <ul>
+                  <li class="">
+                    <a onclick="filterPageArchive(82014); return false;" href="News%3Farchive=82014.html">Aug 2014
+                      (4)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(72014); return false;" href="News%3Farchive=72014.html">Jul 2014
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(62014); return false;" href="News%3Farchive=62014.html">Jun 2014
+                      (3)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(52014); return false;" href="News%3Farchive=52014.html">May 2014
+                      (5)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(42014); return false;" href="News%3Farchive=42014.html">Apr 2014
+                      (3)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(32014); return false;" href="News%3Farchive=32014.html">Mar 2014
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(22014); return false;" href="News%3Farchive=22014.html">Feb 2014
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(12014); return false;" href="News%3Farchive=12014.html">Jan 2014
+                      (1)</a></li>
+                </ul>
+
+
+                <h4><a href="news.html">2013</a></h4>
+                <ul>
+                  <li class="">
+                    <a onclick="filterPageArchive(122013); return false;" href="News%3Farchive=122013.html">Dec 2013
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(112013); return false;" href="News%3Farchive=112013.html">Nov 2013
+                      (2)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(102013); return false;" href="News%3Farchive=102013.html">Oct 2013
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(82013); return false;" href="News%3Farchive=82013.html">Aug 2013
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(62013); return false;" href="News%3Farchive=62013.html">Jun 2013
+                      (2)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(52013); return false;" href="News%3Farchive=52013.html">May 2013
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(12013); return false;" href="News%3Farchive=12013.html">Jan 2013
+                      (2)</a></li>
+                </ul>
+
+
+                <h4><a href="news.html">2012</a></h4>
+                <ul>
+                  <li class="">
+                    <a onclick="filterPageArchive(42012); return false;" href="News%3Farchive=42012.html">Apr 2012
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(32012); return false;" href="News%3Farchive=32012.html">Mar 2012
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(22012); return false;" href="News%3Farchive=22012.html">Feb 2012
+                      (3)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(12012); return false;" href="News%3Farchive=12012.html">Jan 2012
+                      (1)</a></li>
+                </ul>
+
+
+                <h4><a href="news.html">2011</a></h4>
+                <ul>
+                  <li class="">
+                    <a onclick="filterPageArchive(52011); return false;" href="News%3Farchive=52011.html">May 2011
+                      (3)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(32011); return false;" href="News%3Farchive=32011.html">Mar 2011
+                      (1)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(22011); return false;" href="News%3Farchive=22011.html">Feb 2011
+                      (3)</a></li>
+
+                  <li class="">
+                    <a onclick="filterPageArchive(12011); return false;" href="News%3Farchive=12011.html">Jan 2011
+                      (1)</a></li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="line"></div>
+
+
+            <div class="categories-widget">
+              <div class="heading"><h3>Категорії</h3></div>
+              <ul class="categories-list">
+
+                <li class=""><a onclick="filterPageCategory(''); return false;" href="news.html#">Категорія №1</a></li>
+                <li class=""><a onclick="filterPageCategory(''); return false;" href="news.html#">Категорія №2</a></li>
+                <li class=""><a onclick="filterPageCategory(''); return false;" href="news.html#">Категорія №3</a></li>
+                <li class=""><a onclick="filterPageCategory(''); return false;" href="news.html#">Категорія №4</a></li>
+                <li class=""><a onclick="filterPageCategory(''); return false;" href="news.html#">Категорія №5</a></li>
+                <li class=""><a onclick="filterPageCategory(''); return false;" href="news.html#">Категорія №6</a></li>
+                <li class=""><a onclick="filterPageCategory(''); return false;" href="news.html#">Категорія №7</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<%= render template: 'layouts/application' %>

@@ -1,0 +1,138 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="leftfoot">
+        <div class="connect">
+          <h4>Феофанія в соціальних мережах</h4>
+          <ul class="share-links">
+            <li><a href='https://www.facebook.com/feofania' target='_blank'><i
+            class='icon-facebook'></i></a></li>
+            <li><a href='https://twitter.com/feofania' target='_blank'><i class='icon-twitter'></i></a>
+            </li>
+            <li><a href='http://www.youtube.com/user/feofania' target='_blank'><i
+            class='icon-youtube'></i></a></li>
+            <li><a href='http://instagram.com/feofania' target='_blank'><i
+            class='icon-instagram'></i></a></li>
+          </ul>
+        </div>
+        <!--/connect-->
+        <div class="line"></div>
+        <div class="subscribe">
+          <h4>Підпишіться на Новини</h4>
+
+          <p>Отримуйте остнні новини так пропозиції</p>
+
+          <div class="form" id="formSubscribe"
+               onkeypress="javascript:return WebForm_FireDefaultButton(event, 'uiBtnSubscribe');">
+            <input type="text" placeholder="Вкажіть email" id="uiTxtEmmail" name="uiTxtEmmail"><input
+          type="button" class="btn btn-black" value="Готово" id="uiBtnSubscribe"
+          name="uiBtnSubscribe" onclick="subscribe(); return false">
+          </div>
+        </div>
+      </div>
+      <!--/leftfoot-->
+
+      <div class="centerfoot">
+        <div class="contact">
+          <h4 id="contact-bottom">Контакт з нами</h4>
+          <dl>
+            <dt class="phone"> Телефон:</dt>
+            <dd>
+              <a href="tel://+380 44 259 6977"><span class="btn-phone"><i class="icon-phone"></i> +380 44 259 6977</span></a>
+              <br></dd>
+            <dt> Email:</dt>
+            <dd><a href="mailto:info@feofaniya.org">info@feofaniya.org</a><br></dd>
+            <dt> Факс:</dt>
+            <dd>+380 44 259 6977</dd>
+          </dl>
+          <p>Поштова адреса<br/>
+            Академіка Заболотного, 21<br/>
+            03680, Київ, Україна</p>
+        </div>
+        <!--/contact-->
+        <div class="line"></div>
+        <div class="gmap">
+          <h4>Знайти на мапі <a
+          href="https://maps.google.com/maps?q=Академіка Заболотного, 21, 03680, Київ, Україна"
+          title="FEOFANIA on Google Map" target="_blank"><i class="icon-openlink"></i></a></h4>
+
+          <p>Адреса<br/>
+            Академіка Заболотного, 21<br/>
+            03680, Київ, Україна</p>
+
+          <div class="map">
+            <a href="https://maps.google.com/maps?q=Академіка Заболотного, 21, 03680, Київ, Україна"
+               title="Feofaniya on Google Map" target="_blank"><img
+            src="/images/map.jpg?width=350&amp;height=260&amp;ext=.jpg"
+            alt="Feofaniya Map"/></a>
+          </div>
+        </div>
+      </div>
+      <!--/centerfoot-->
+
+      <div class="rightfoot">
+        <div class="staff-login">
+          <h4>Для персоналу</h4>
+
+          <div class="form"
+               onkeypress="">
+            <div class="staff-name"><input type="text" placeholder="Логін чи Email" id="uiTxtUsername"
+                                           name="uiTxtUsername"></div>
+            <div class="staff-pwd"><input type="password" placeholder="Пароль" id="uiTxtPassword"
+                                          name="uiTxtPassword"></div>
+            <div class="staff-remember">
+              <input type="checkbox" name="uiChkRemember" id="uiChkRemember" value="Yes"
+                     checked><label
+            for="uiChkRemember"> Запом'ятати мене</label>
+              <input type="button" class="btn btn-black" value="Увійти" ID="uiBtnLogin"
+                     name="uiBtnLogin" onclick="login();return false;"/>
+            </div>
+            <div id="loginError"></div>
+            <br><br><br>
+
+            <div class="forgot-password"><a href="mailto:admin@feofaniya.org?subject=login"><i
+            class="icon-arrow"></i>Забули пароль?</a></div>
+          </div>
+        </div>
+        <!--/staff-login-->
+      </div>
+      <!--/rightfoot-->
+
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="container">
+    <div class="footlogo"><img src="/images/logo-bottom.png" alt="Феофанія"></div>
+    <div class="footcopy">
+      <ul>
+
+        <li><a href="/sitemap.html">Мапа сайту</a></li>
+        <li><a href="/privacy.html">Умови користування сервісом</a></li>
+        <li><a href="/contact.html">Контакти</a></li>
+
+        <li>&copy; 2014 Феофанія</li>
+      </ul>
+    </div>
+    <div class="footslogan">
+      <h4>Клінічна Лікарня "Феофанія"</h4>
+    </div>
+    <div class="phar">
+      <a href="http://phar.com.ua" title="Создать сайт" target="_blank">Розробка сайту</a>
+      <a href="http://phar.com.ua" title="Создать сайт Киев" target="_blank"><img
+      src="/images/phar_logo.png" alt="PHAR - разработка сайтов"/></a>
+    </div>
+    <div class="select-language" style="display: none">
+      <select id="languages">
+        <option>Вибір мови</option>
+        <option>English</option>
+        <option>Chinese</option>
+        <option>Spain</option>
+        <option>France</option>
+      </select>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+</footer>

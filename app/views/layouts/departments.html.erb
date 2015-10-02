@@ -1,0 +1,24 @@
+<% content_for :content do %>
+    <%= render partial: 'shared/title_section',
+               # collection: @products, as: :item,
+               locals: { color: 'purple',
+                         title: 'Відділення',
+                         icon: '<svg class="svg-lab" viewBox="0 0 50 70">
+                                    <use xlink:href="#icon-research"></use>
+                                </svg>'} %>
+
+    <div class="container purple">
+      <div class="row">
+
+        <div class="leftSidebar">
+          <%= render 'shared/departments_sidenav' %>
+        </div>
+
+        <div class="rightContent">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<%= render template: 'layouts/application' %>

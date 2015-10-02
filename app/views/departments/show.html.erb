@@ -1,0 +1,156 @@
+<% breadcrumb :department, @department %>
+
+<div id="content-slider" class="flexslider">
+  <!--<div class="slidecount"><span class="current-slide">1</span> з <span class="total-slides">1</span></div>-->
+  <ul class="slides">
+
+    <li>
+      <div class="label-bg"></div>
+      <!--<div class="label"><%= @department.name %></div>-->
+      <img src='<%= @department.image %>'
+           alt='<%= @department.name %>'/>
+    </li>
+
+  </ul>
+  <div class="margin"></div>
+</div>
+
+<div class="clearfix"></div>
+<h1><%= @department.name %></h1>
+
+<div class="intro-content">
+  <h2>
+    <%= raw @department.description.presence %>
+    <br/><br/>
+  </h2>
+
+  <div class="more-intro">
+    <%= raw @department.introduction.presence %>
+  </div>
+
+  <div id="ctl00_plcMain_showMore" class="show-more">
+    <a href="javascript:void(0)" class="btn-more">Детальніше</a>
+  </div>
+</div>
+
+
+<div class="research-heading">
+  <h3>
+    Розділи
+  </h3>
+</div>
+
+
+<div class="explore-listing">
+  <div class="boxWrap">
+
+    <% if @department.general_overview.present? %>
+        <div class="box">
+          <article>
+            <div class="pic" style="">
+              <%= link_to about_department_url do %>
+                  <span></span>
+                  <img src="<%= @department.general_overview.image(:thumb).presence || '/images/treatment/surgery/entry1.png' %>"
+                       alt="Загальна інформація">
+              <% end %>
+            </div>
+            <div class="detail">
+              <h3><%= link_to 'Загальна інформація', about_department_url %></h3>
+              <p></p>
+            </div>
+          </article>
+        </div>
+    <% end %>
+
+    <% if @department.for_patients.present? %>
+        <div class="box">
+          <article>
+            <div class="pic" style="">
+              <%= link_to department_patients_url do %>
+                  <span></span>
+                  <img src="<%= @department.for_patients.image(:thumb).presence || '/images/treatment/surgery/entry2.png' %>"
+                       alt="Пацієнтам">
+              <% end %>
+            </div>
+            <div class="detail">
+              <h3><%= link_to 'Пацієнтам', department_patients_url %></h3>
+              <p></p>
+            </div>
+          </article>
+        </div>
+    <% end %>
+
+    <% if @department.specialists.present? %>
+        <div class="box">
+          <article>
+            <div class="pic" style="">
+              <%= link_to department_specialists_url do %>
+                  <span></span>
+                  <img src="<%= @department.specialists.image(:thumb).presence || '/images/treatment/surgery/entry3.png' %>"
+                       alt="Фахівці">
+              <% end %>
+            </div>
+            <div class="detail">
+              <h3><%= link_to 'Фахівці', department_specialists_url %></h3>
+              <p></p>
+            </div>
+          </article>
+        </div>
+    <% end %>
+
+    <% if @department.achievements.present? %>
+        <div class="box">
+          <article>
+            <div class="pic" style="">
+              <%= link_to department_achievements_url do %>
+                  <span></span>
+                  <img src="<%= @department.achievements.image(:thumb).presence || '/images/treatment/surgery/entry4.png' %>"
+                       alt="Досягнення">
+              <% end %>
+            </div>
+            <div class="detail">
+              <h3><%= link_to 'Досягнення', department_achievements_url %></h3>
+              <p></p>
+            </div>
+          </article>
+        </div>
+    <% end %>
+
+    <% if @department.publications.present? %>
+        <div class="box">
+          <article>
+            <div class="pic" style="">
+              <%= link_to department_publications_url do %>
+                  <span></span>
+                  <img src="<%= @department.publications.image(:thumb).presence || '/images/treatment/surgery/entry5.png' %>"
+                       alt="Публікації">
+              <% end %>
+            </div>
+            <div class="detail">
+              <h3><%= link_to 'Публікації', department_publications_url %></h3>
+              <p></p>
+            </div>
+          </article>
+        </div>
+    <% end %>
+
+    <% if @department.in_press.present? %>
+        <div class="box">
+          <article>
+            <div class="pic" style="">
+              <%= link_to department_press_url do %>
+                  <span></span>
+                  <img src="<%= @department.in_press.image(:thumb).presence || '/images/treatment/surgery/entry6.png' %>"
+                       alt="Преса про нас">
+              <% end %>
+            </div>
+            <div class="detail">
+              <h3><%= link_to 'Преса про нас', department_press_url %></h3>
+              <p></p>
+            </div>
+          </article>
+        </div>
+    <% end %>
+
+  </div>
+</div>

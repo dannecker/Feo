@@ -1,0 +1,4 @@
+<% breadcrumb :department_subpage, @department, 'Преса про нас' %>
+
+<%= render partial: 'shared/departments_subpage',
+           locals: { page: @department.in_press } if @department.try(:in_press) %>

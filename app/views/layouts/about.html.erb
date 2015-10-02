@@ -1,0 +1,29 @@
+<% content_for :content do %>
+    <%= render partial: 'shared/title_section',
+               # collection: @products, as: :item,
+               locals: {color: 'orange',
+                        icon: '<svg class="svg-group" viewBox="0 0 32 32">
+                                <use xlink:href="#icon-group1"/>
+                                <use xlink:href="#icon-group2"/>
+                                <use xlink:href="#icon-group3"/>
+                               </svg>'} %>
+
+    <div class="page-icon">
+
+    </div>
+
+    <div class="container orange">
+      <div class="row">
+
+        <div class="leftSidebar">
+          <%= render 'shared/about_sidenav' %>
+        </div>
+
+        <div class="rightContent">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<%= render template: 'layouts/application' %>

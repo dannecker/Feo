@@ -1,0 +1,21 @@
+<% breadcrumb :department_category, @category %>
+
+<div class="clearfix"></div>
+<h1></h1>
+
+<div class="intro-content">
+  <h2>
+  </h2>
+
+  <div class="more-intro">
+  </div>
+</div>
+
+
+<div class="entry">
+  <div class="boxWrap">
+    <%= render partial: 'shared/grid',
+               collection: @departments, as: :item
+    %>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<% breadcrumb :all_departments %>
+
+<div class="clearfix"></div>
+<h1>Відділення лікрані "Феофанія"</h1>
+
+<div class="intro-content">
+  <h2>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aspernatur at
+    consequuntur error esse laboriosam nulla repellendus ullam, ut?
+  </h2>
+
+  <div class="more-intro">
+
+  </div>
+</div>
+
+
+<div class="entry">
+  <div class="boxWrap">
+    <%= render partial: 'shared/grid',
+               collection: @categories, as: :item if @categories.length
+    %>
+  </div>
+</div>

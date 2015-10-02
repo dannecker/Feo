@@ -1,0 +1,4 @@
+<% breadcrumb :department_subpage, @department, 'Публікації' %>
+
+<%= render partial: 'shared/departments_subpage',
+           locals: { page: @department.publications } if @department.try(:publications) %>
